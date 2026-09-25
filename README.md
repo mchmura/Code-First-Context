@@ -52,6 +52,29 @@ Code-First-Context encourages teams to:
 4. maintain a transparent history of requirements and decisions
 5. reduce dependency on external note silos for delivery-critical information
 
+## Challenges and drawbacks
+
+Code-First-Context introduces challenges:
+
+1. Requirements are provided by Business and Product teams, which usually do NOT use Repos and code.
+   Implications:
+   -  this makes it difficult (if not impossible) for them to read and maintain the context
+   -  they are hesitant to use this approach, making the Delivery team responsible for maintenance based on other sources
+   Solutions:
+   - introduce Business and Product to tools allowing them to read, review and comment the context
+   - implement automations that provide a way to update the context repo (e.g. AI tools with integration to GH)
+  
+2. Delivery team becomes the owner of the context
+   Implications:
+   -  Delivery team has additional admin work to update and review the context
+   Solutions:
+   - accept the admin work - it would be done anyway through notes, meetings scattered across other tools - we believe this extra mile is already covered elsewhere but covering it in this approach would actually make it more efficient
+   - automate updates with AI
+  
+3. Two sources of truth
+   - for this to work, the repo should be the single source of truth for the context
+   - if maintenance of the repo by both Tech and non-Tech teams is not possible, you either drop this approach, or use two sources
+
 ## Intended outcome
 
 The outcome is a project repository that contains not only source code, but also the context needed to understand why the code exists, how it should evolve, and what constraints guide delivery.
